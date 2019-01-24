@@ -9,12 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var presenter: Presenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        presenter = Presenter(delegate: self)
     }
+}
 
+extension ViewController: PresenterDelegate {
 
 }
 

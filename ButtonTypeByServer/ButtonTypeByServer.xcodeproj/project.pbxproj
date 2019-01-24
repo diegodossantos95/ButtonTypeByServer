@@ -12,6 +12,9 @@
 		AF53A72121F80D2100E5C74B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF53A71F21F80D2100E5C74B /* Main.storyboard */; };
 		AF53A72321F80D2400E5C74B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF53A72221F80D2400E5C74B /* Assets.xcassets */; };
 		AF53A72621F80D2400E5C74B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF53A72421F80D2400E5C74B /* LaunchScreen.storyboard */; };
+		AF53A72E21F8112A00E5C74B /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53A72D21F8112A00E5C74B /* Presenter.swift */; };
+		AF79D13F21F93CBB0046787E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF79D13E21F93CBB0046787E /* Button.swift */; };
+		AF79D14121F93CFB0046787E /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF79D14021F93CFB0046787E /* ButtonTypeEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		AF53A72221F80D2400E5C74B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF53A72521F80D2400E5C74B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF53A72721F80D2400E5C74B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF53A72D21F8112A00E5C74B /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		AF79D13E21F93CBB0046787E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		AF79D14021F93CFB0046787E /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		AF53A71A21F80D2100E5C74B /* ButtonTypeByServer */ = {
 			isa = PBXGroup;
 			children = (
+				AF79D13D21F93CAE0046787E /* Model */,
+				AF79D13C21F93CA80046787E /* Presenter */,
+				AF79D13B21F93C9E0046787E /* View */,
 				AF53A71B21F80D2100E5C74B /* AppDelegate.swift */,
-				AF53A71D21F80D2100E5C74B /* ViewController.swift */,
-				AF53A71F21F80D2100E5C74B /* Main.storyboard */,
 				AF53A72221F80D2400E5C74B /* Assets.xcassets */,
 				AF53A72421F80D2400E5C74B /* LaunchScreen.storyboard */,
 				AF53A72721F80D2400E5C74B /* Info.plist */,
 			);
 			path = ButtonTypeByServer;
+			sourceTree = "<group>";
+		};
+		AF79D13B21F93C9E0046787E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF53A71D21F80D2100E5C74B /* ViewController.swift */,
+				AF53A71F21F80D2100E5C74B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF79D13C21F93CA80046787E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AF53A72D21F8112A00E5C74B /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AF79D13D21F93CAE0046787E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF79D13E21F93CBB0046787E /* Button.swift */,
+				AF79D14021F93CFB0046787E /* ButtonTypeEnum.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF53A72E21F8112A00E5C74B /* Presenter.swift in Sources */,
 				AF53A71E21F80D2100E5C74B /* ViewController.swift in Sources */,
 				AF53A71C21F80D2100E5C74B /* AppDelegate.swift in Sources */,
+				AF79D14121F93CFB0046787E /* ButtonTypeEnum.swift in Sources */,
+				AF79D13F21F93CBB0046787E /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
