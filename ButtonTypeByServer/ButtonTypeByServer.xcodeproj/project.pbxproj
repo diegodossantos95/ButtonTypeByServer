@@ -15,6 +15,7 @@
 		AF53A72E21F8112A00E5C74B /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53A72D21F8112A00E5C74B /* Presenter.swift */; };
 		AF79D13F21F93CBB0046787E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF79D13E21F93CBB0046787E /* Button.swift */; };
 		AF79D14121F93CFB0046787E /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF79D14021F93CFB0046787E /* ButtonTypeEnum.swift */; };
+		AF79D14321F93FAE0046787E /* ButtonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF79D14221F93FAE0046787E /* ButtonService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AF53A72D21F8112A00E5C74B /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		AF79D13E21F93CBB0046787E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		AF79D14021F93CFB0046787E /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
+		AF79D14221F93FAE0046787E /* ButtonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		AF53A71A21F80D2100E5C74B /* ButtonTypeByServer */ = {
 			isa = PBXGroup;
 			children = (
+				AF79D14421F93FB50046787E /* Service */,
 				AF79D13D21F93CAE0046787E /* Model */,
 				AF79D13C21F93CA80046787E /* Presenter */,
 				AF79D13B21F93C9E0046787E /* View */,
@@ -95,6 +98,14 @@
 				AF79D14021F93CFB0046787E /* ButtonTypeEnum.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AF79D14421F93FB50046787E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AF79D14221F93FAE0046787E /* ButtonService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				AF53A72E21F8112A00E5C74B /* Presenter.swift in Sources */,
 				AF53A71E21F80D2100E5C74B /* ViewController.swift in Sources */,
 				AF53A71C21F80D2100E5C74B /* AppDelegate.swift in Sources */,
+				AF79D14321F93FAE0046787E /* ButtonService.swift in Sources */,
 				AF79D14121F93CFB0046787E /* ButtonTypeEnum.swift in Sources */,
 				AF79D13F21F93CBB0046787E /* Button.swift in Sources */,
 			);
