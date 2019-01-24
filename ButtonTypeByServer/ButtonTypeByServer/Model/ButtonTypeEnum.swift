@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum ButtonTypeEnum {
+enum ButtonTypeEnum: String {
     case left, right, below
 }
