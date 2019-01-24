@@ -8,14 +8,30 @@
 
 import Foundation
 
-protocol PresenterDelegate {
-
+// MARK: Protocols
+protocol PresenterDelegate: class {
+    func showButtons()
 }
 
 class Presenter {
-    var delegate: PresenterDelegate
+    // MARK: Properties
+    weak var delegate: PresenterDelegate?
 
-    init(delegate: PresenterDelegate) {
-        self.delegate = delegate
+    private var service: ButtonService
+    private var buttons = [Button]()
+
+    // MARK: Class Lifecycle
+    init(service: ButtonService) {
+        self.service = service
+    }
+
+    // MARK: Functions
+    func getButtons() -> [Button] {
+        return buttons
+    }
+
+    func loadButtons() {
+        buttons = service.getButtons()
+        delegate?.showButtons()
     }
 }
