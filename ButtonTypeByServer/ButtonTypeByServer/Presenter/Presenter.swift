@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: Protocols
 protocol PresenterDelegate: class {
-    func showButtons()
+    func buttonsDidLoad(buttons: [Button])
 }
 
 class Presenter {
@@ -18,7 +18,6 @@ class Presenter {
     weak var delegate: PresenterDelegate?
 
     private var service: ButtonService
-    private var buttons = [Button]()
 
     // MARK: Class Lifecycle
     init(service: ButtonService) {
@@ -26,12 +25,13 @@ class Presenter {
     }
 
     // MARK: Functions
-    func getButtons() -> [Button] {
-        return buttons
+    func viewWillAppear() {
+        loadButtons()
     }
 
-    func loadButtons() {
-        buttons = service.getButtons()
-        delegate?.showButtons()
+    // MARK: Private Functions
+    private func loadButtons() {
+        let buttons = service.getButtons()
+        delegate?.buttonsDidLoad(buttons: buttons)
     }
 }

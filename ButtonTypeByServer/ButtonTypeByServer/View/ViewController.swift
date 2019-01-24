@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     // MARK: Properties
     private var presenter: Presenter?
+    private var buttons = [Button]()
 
     // MARK: View Lifecycle
     override func viewDidLoad() {
@@ -25,19 +26,20 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter?.loadButtons()
+        presenter?.viewWillAppear()
     }
 }
 
 extension ViewController: PresenterDelegate {
-    func showButtons() {
-        // TODO: show the buttons in the collection view
+    func buttonsDidLoad(buttons: [Button]) {
+        self.buttons = buttons
+        collectionView.reloadData()
     }
 }
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter?.getButtons().count ?? 0
+        return buttons.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
