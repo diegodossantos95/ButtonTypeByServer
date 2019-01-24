@@ -43,8 +43,11 @@ extension ViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // TODO: create cell for each type of button
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "buttonCell", for: indexPath)
+        let button = buttons[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: button.type.rawValue, for: indexPath) as! ButtonCellProtocol & UICollectionViewCell
+
+        cell.configure(button: button)
+
         return cell
     }
 }

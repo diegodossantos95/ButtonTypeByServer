@@ -20,29 +20,124 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C2h-T6-Lx2">
                                 <rect key="frame" x="67.5" y="20" width="240" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="cqz-s4-Rav"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8tB-yi-1fg">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NpZ-kd-t5U">
+                                    <size key="itemSize" width="220" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="buttonCell" id="Gfm-ep-Vum">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="left" id="Gfm-ep-Vum" customClass="LeftButtonCell" customModule="ButtonTypeByServer" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="0.0" width="220" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="220" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHa-mR-nx5">
+                                                    <rect key="frame" x="20" y="55" width="84" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXt-Xt-xiZ">
+                                                    <rect key="frame" x="116" y="59.5" width="84" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="sXt-Xt-xiZ" firstAttribute="leading" secondItem="ZHa-mR-nx5" secondAttribute="trailing" constant="12" id="SgZ-RS-Mx7"/>
+                                            <constraint firstItem="ZHa-mR-nx5" firstAttribute="centerY" secondItem="Gfm-ep-Vum" secondAttribute="centerY" id="jUQ-M3-Rer"/>
+                                            <constraint firstItem="sXt-Xt-xiZ" firstAttribute="centerY" secondItem="Gfm-ep-Vum" secondAttribute="centerY" id="l19-Vd-SEV"/>
+                                            <constraint firstItem="ZHa-mR-nx5" firstAttribute="leading" secondItem="Gfm-ep-Vum" secondAttribute="leadingMargin" constant="12" id="lBA-aV-b2b"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="sXt-Xt-xiZ" secondAttribute="trailing" constant="12" id="tly-1w-czP"/>
+                                            <constraint firstItem="sXt-Xt-xiZ" firstAttribute="width" secondItem="ZHa-mR-nx5" secondAttribute="width" id="v8X-Gw-yq7"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="sXt-Xt-xiZ" id="38X-aI-i0f"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="right" id="xZB-8g-61b" customClass="RightButtonCell" customModule="ButtonTypeByServer" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="150" width="220" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="220" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-4u-0Ac">
+                                                    <rect key="frame" x="116" y="55" width="84" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPV-fp-5VA">
+                                                    <rect key="frame" x="20" y="59.5" width="84" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ZPV-fp-5VA" firstAttribute="width" secondItem="BcZ-4u-0Ac" secondAttribute="width" id="Gd7-5S-h1z"/>
+                                            <constraint firstItem="BcZ-4u-0Ac" firstAttribute="leading" secondItem="ZPV-fp-5VA" secondAttribute="trailing" constant="12" id="LvT-r4-goK"/>
+                                            <constraint firstItem="ZPV-fp-5VA" firstAttribute="centerY" secondItem="xZB-8g-61b" secondAttribute="centerY" id="OT8-ch-wwP"/>
+                                            <constraint firstItem="BcZ-4u-0Ac" firstAttribute="centerY" secondItem="xZB-8g-61b" secondAttribute="centerY" id="Vpf-Nq-GdL"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="BcZ-4u-0Ac" secondAttribute="trailing" constant="12" id="his-c0-AEk"/>
+                                            <constraint firstItem="ZPV-fp-5VA" firstAttribute="leading" secondItem="xZB-8g-61b" secondAttribute="leadingMargin" constant="12" id="xZ2-Y1-sx2"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="ZPV-fp-5VA" id="sa3-eL-zSc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="below" id="FLx-IB-04h" customClass="BelowButtonCell" customModule="ButtonTypeByServer" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="300" width="220" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="220" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acy-tw-beM">
+                                                    <rect key="frame" x="68" y="30" width="84" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="84" id="UjN-0O-Kdr"/>
+                                                        <constraint firstAttribute="height" constant="25" id="Yqw-oW-566"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ir-FK-hXn">
+                                                    <rect key="frame" x="68" y="85" width="84" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="84" id="QhG-cR-ME3"/>
+                                                        <constraint firstAttribute="height" constant="25" id="cLV-Pi-7Pj"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="5Ir-FK-hXn" firstAttribute="centerX" secondItem="FLx-IB-04h" secondAttribute="centerX" id="GcM-0A-8Ks"/>
+                                            <constraint firstItem="Acy-tw-beM" firstAttribute="centerX" secondItem="FLx-IB-04h" secondAttribute="centerX" id="Gve-We-Kv1"/>
+                                            <constraint firstAttribute="bottom" secondItem="5Ir-FK-hXn" secondAttribute="bottom" constant="30" id="U8g-7v-mOR"/>
+                                            <constraint firstItem="Acy-tw-beM" firstAttribute="top" secondItem="FLx-IB-04h" secondAttribute="top" constant="30" id="hxv-v5-rqb"/>
+                                            <constraint firstItem="5Ir-FK-hXn" firstAttribute="top" secondItem="Acy-tw-beM" secondAttribute="bottom" constant="30" id="ibt-Za-7Ei"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="Acy-tw-beM" id="Iq9-mg-nhV"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C2h-T6-Lx2" secondAttribute="bottom" id="6xx-sw-sOJ"/>
                             <constraint firstItem="C2h-T6-Lx2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bfN-sB-x6B"/>
