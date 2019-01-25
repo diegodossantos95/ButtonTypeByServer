@@ -44,10 +44,21 @@ extension ViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let button = buttons[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: button.type.rawValue, for: indexPath) as! ButtonCellProtocol & UICollectionViewCell
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: button.type.rawValue, for: indexPath) as! ButtonCellProtocol & UICollectionViewCell
 
         cell.configure(button: button)
+        cell.delegate = self
 
         return cell
+    }
+}
+
+extension ViewController: ButtonCellDelegate {
+    func buttonDidPress(name: String) {
+        let alert = UIAlertController(title: name, message:
+            name, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
     }
 }

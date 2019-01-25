@@ -41,6 +41,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHa-mR-nx5">
                                                     <rect key="frame" x="20" y="55" width="84" height="30"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="buttonDidPress" destination="Gfm-ep-Vum" eventType="touchUpInside" id="xzq-J5-zHc"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXt-Xt-xiZ">
                                                     <rect key="frame" x="116" y="59.5" width="84" height="21"/>
@@ -73,6 +76,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-4u-0Ac">
                                                     <rect key="frame" x="116" y="55" width="84" height="30"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="buttonDidPress" destination="xZB-8g-61b" eventType="touchUpInside" id="E78-4o-pZe"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPV-fp-5VA">
                                                     <rect key="frame" x="20" y="59.5" width="84" height="21"/>
@@ -119,6 +125,9 @@
                                                         <constraint firstAttribute="height" constant="25" id="cLV-Pi-7Pj"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="buttonDidPress" destination="FLx-IB-04h" eventType="touchUpInside" id="NQ7-a0-f1G"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>

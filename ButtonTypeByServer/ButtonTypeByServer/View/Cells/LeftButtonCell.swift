@@ -10,10 +10,15 @@ import Foundation
 import UIKit
 
 class LeftButtonCell: UICollectionViewCell, ButtonCellProtocol {
-
+    weak var delegate: ButtonCellDelegate?
+    
     @IBOutlet weak var nameLabel: UILabel!
 
     func configure(button: Button) {
         nameLabel.text = button.name
+    }
+
+    @IBAction func buttonDidPress() {
+        delegate?.buttonDidPress(name: nameLabel.text ?? "")
     }
 }

@@ -9,5 +9,10 @@
 import Foundation
 
 protocol ButtonCellProtocol {
+    var delegate: ButtonCellDelegate? { get set }
     func configure(button: Button)
+}
+
+protocol ButtonCellDelegate: class {
+    func buttonDidPress(name: String)
 }
