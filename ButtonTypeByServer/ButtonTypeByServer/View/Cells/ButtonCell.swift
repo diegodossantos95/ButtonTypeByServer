@@ -1,5 +1,5 @@
 //
-//  BelowButtonCell.swift
+//  LeftButtonCell.swift
 //  ButtonTypeByServer
 //
 //  Created by dos Santos, Diego on 24/01/19.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class BelowButtonCell: UICollectionViewCell, ButtonCellProtocol {
+class ButtonCell: UICollectionViewCell, ButtonCellProtocol {
     weak var delegate: ButtonCellDelegate?
-
+    
     @IBOutlet weak var nameLabel: UILabel!
 
     func configure(button: Button) {
