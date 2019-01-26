@@ -13,14 +13,19 @@ protocol PresenterDelegate: class {
     func buttonsDidLoad(buttons: [Button])
 }
 
-class Presenter {
+protocol PresenterProtocol {
+    var delegate: PresenterDelegate? { get set }
+    func viewWillAppear()
+}
+
+class Presenter: PresenterProtocol {
     // MARK: Properties
     weak var delegate: PresenterDelegate?
 
-    private var service: ButtonService
+    private var service: ButtonServiceProtocol
 
     // MARK: Class Lifecycle
-    init(service: ButtonService) {
+    init(service: ButtonServiceProtocol) {
         self.service = service
     }
 

@@ -8,7 +8,12 @@
 
 import Foundation
 
-class ButtonService {
+// MARK: Protocols
+protocol ButtonServiceProtocol {
+    func getButtons() -> [Button]
+}
+
+class ButtonService: ButtonServiceProtocol {
     func getButtons() -> [Button]{
         return [
             Button(type: .below, name: "Apple"),

@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     // MARK: Properties
-    private var presenter: Presenter?
+    private var presenter: PresenterProtocol?
     private var buttons = [Button]()
 
     // MARK: View Lifecycle
